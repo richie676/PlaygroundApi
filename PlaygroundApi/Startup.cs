@@ -38,13 +38,6 @@ namespace PlaygroundApi
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}");
-            //});
-
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -52,19 +45,10 @@ namespace PlaygroundApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Test Daten Service V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlaygroundApi V1");
             });
 
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-
-            //app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

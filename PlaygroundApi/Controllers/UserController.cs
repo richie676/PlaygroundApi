@@ -13,26 +13,26 @@ namespace PlaygroundApi.Controllers
     public class UserController : Controller
     {
         [HttpGet]
-        public JsonResult Get(string identcode)
+        public JsonResult Get(string firstName = "Gertraude", string lastName = "Get", string username = "Gerti")
         {
 
-            var user = new UserDto() { firstName = "Gertraude", lastName = "Get", userName = "Gerti" };
+            var user = new UserDto() { firstName = firstName, lastName = lastName, userName = username};
 
             return Json(user);
         }
 
         [HttpPost]
-        public JsonResult Post(string email)
+        public JsonResult Post(string firstName = "Paul", string lastName = "Post", string username = "Pauli")
         {
-            var user = new UserDto() { firstName = "Paul", lastName = "Post", userName = "Pauli" };
+            var user = new UserDto() { firstName = firstName, lastName = lastName, userName = username };
 
             return Json(user);
         }
 
         [HttpPut]
-        public JsonResult Put(string identcode, string newStatus)
+        public JsonResult Put(string firstName = "Peter", string lastName = "Put", string username = "Peet")
         {
-            var user = new UserDto() { firstName = "Peter", lastName = "Put", userName = "Peet" };
+            var user = new UserDto() { firstName = firstName, lastName = lastName, userName = username };
 
             return Json(user);
         }
