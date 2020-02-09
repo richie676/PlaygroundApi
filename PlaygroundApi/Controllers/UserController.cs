@@ -38,7 +38,7 @@ namespace PlaygroundApi.Controllers
         }
 
         [HttpDelete]
-        public JsonResult Delete(string firstName = "Peter", string lastName = "Put", string username = "Peet")
+        public JsonResult Delete(string firstName = "David", string lastName = "Delete", string username = "Daweed")
         {
             var user = new UserDto() { firstName = firstName, lastName = lastName, userName = username };
 
