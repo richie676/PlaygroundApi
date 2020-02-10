@@ -45,5 +45,11 @@ namespace PlaygroundApi.Controllers
             return Json(user);
         }
 
+        [HttpOptions]
+        public JsonResult Options()
+        {
+            return Json(null);
+        }
+
     }
 }
